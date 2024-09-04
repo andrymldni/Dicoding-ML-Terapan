@@ -2,8 +2,7 @@
 
 ## Domain Proyek
 
-Domain proyek yang dipilih dalam proyek machine learning ini adalah mengenai pendidikan dengan judul proyek "Sistem Rekomendasi Penilaian Asesor Dalam
-Sertifikasi Profesi Berdasarkan Riwayat Belajar Peserta".
+Domain proyek yang dipilih dalam proyek machine learning ini adalah mengenai pendidikan dengan judul proyek "Prediksi Kelulusan Sertifikasi Profesi Berdasarkan Riwayat Belajar Peserta".
 
 - ##### Latar Belakang
   Dalam era globalisasi dan persaingan dunia kerja yang semakin ketat, sertifikasi profesi telah menjadi salah satu tolok ukur penting dalam menilai kompetensi individu di berbagai bidang [1](https://proceeding.unnes.ac.id/snpasca/article/view/281). Sertifikasi ini tidak hanya membantu individu dalam meningkatkan kredibilitas dan daya saing mereka, tetapi juga memberikan jaminan kepada pemberi kerja mengenai kemampuan dan pengetahuan yang dimiliki oleh calon pekerja [2](https://jimfeb.ub.ac.id/index.php/jimfeb/article/view/6853). Dengan demikian, sertifikasi profesional berfungsi sebagai bukti formal atas keterampilan dan pengetahuan, yang dapat meningkatkan peluang kerja serta pengembangan karir seseorang di masa depan. Namun, proses sertifikasi bukanlah hal yang sederhana. Penilaian kompetensi peserta oleh asesor merupakan tahap krusial dalam memastikan bahwa individu yang disertifikasi benar-benar memiliki kemampuan yang diperlukan. Penilaian ini sering kali melibatkan evaluasi berbagai aspek kompetensi, seperti pengetahuan teoritis, keterampilan praktis, dan pengalaman kerja . Dalam konteks ini, tantangan yang dihadapi asesor semakin kompleks, terutama ketika jumlah peserta meningkat dan kriteria penilaian menjadi lebih rumit [3](https://stiemmamuju.e-journal.id/FJIIM/article/download/115/70). Kondisi ini dapat meningkatkan risiko ketidak konsistenan dan subjektivitas dalam penilaian, yang dapat mempengaruhi keadilan dan akurasi hasil sertifikasi.
@@ -16,17 +15,17 @@ Sertifikasi Profesi Berdasarkan Riwayat Belajar Peserta".
 
 Menjelaskan pernyataan masalah latar belakang:
 
-- Bagaimana penerapan algoritma Neural Network dapat menghasilkan rekomendasi penilaian yang lebih akurat dan konsisten pada proses sertifikasi?
+- Bagaimana penerapan algoritma Neural Network dapat menghasilkan prediksi penilaian yang lebih akurat dan konsisten pada proses sertifikasi?
 - Bagaimana cara mengurangi subjektivitas dalam penilaian asesor dengan memanfaatkan riwayat belajar peserta?
-- Bagaimana sistem rekomendasi berbasis Neural Network dapat diintegrasikan ke dalam proses sertifikasi profesi untuk meningkatkan efisiensi dan efektivitas penilaian?
+- Bagaimana sistem prediksi berbasis Neural Network dapat diintegrasikan ke dalam proses sertifikasi profesi untuk meningkatkan efisiensi dan efektivitas penilaian?
 
 ### Goals
 
 Menjelaskan tujuan dari pernyataan masalah:
 
-- Menerapkan algoritma Neural Network untuk menghasilkan rekomendasi penilaian yang lebih akurat dan konsisten.
+- Menerapkan algoritma Neural Network untuk menghasilkan prediksi penilaian yang lebih akurat dan konsisten.
 - Mengurangi subjektivitas dalam penilaian asesor dengan memanfaatkan riwayat belajar peserta.
-- Mengintegrasikan sistem rekomendasi berbasis Neural Network ke dalam proses sertifikasi profesi untuk meningkatkan efisiensi dan efektivitas penilaian.
+- Mengintegrasikan sistem prediksi berbasis Neural Network ke dalam proses sertifikasi profesi untuk meningkatkan efisiensi dan efektivitas penilaian.
 
 #### Solution Statements
 
@@ -97,13 +96,11 @@ Pada berkas yang diuduh yakni dataset-tortuga.csv berisi 20000 baris dan 16 kolo
 
 - Men-drop kolom `Unnamed: 0`, `NAME`, `USER_ID`
 - Menampilkan kolom unik <br />
-  ![Image coloumn Unik](https://i.postimg.cc/qRtFZSvK/unik-kolom.jpg)
+  ![unik](https://github.com/user-attachments/assets/c5487af6-1958-4090-a951-1c36f5367af9)
 - Menghapus kolom `PROFILE` sehingga menyisakan kolom untuk analisis lebih lanjut <br />
-  ![Image remove profile](https://i.postimg.cc/tRrFSJVL/remove-profile.jpg)
+  ![profile](https://github.com/user-attachments/assets/43d8b1f4-44cf-4ebc-b6fa-c812c09e3416)
 - Men-check missing value pada setiap kolom <br />
-  ![Image missing value](https://i.postimg.cc/xCQT3vRL/missing-value.jpg)
-- Mengimputasi nilai yang hilang dengan menggunakan median <br />
-  ![Image isi kolom](https://i.postimg.cc/FRKC8Rh1/median.jpg)
+  ![missing value](https://github.com/user-attachments/assets/be585bd4-04b9-4309-96c5-84ef07565294)
 
 ## Data Preparation
 
@@ -117,6 +114,8 @@ Berikut adalah tahapan-tahapan dalam melakukan pra-pemrosesan data:
   ![Image of Dataset](https://i.postimg.cc/d3t8TtNy/standart.jpg)
 - Kode ini membagi data menjadi fitur (X) dan target (y) untuk pelatihan dan pengujian model.<br />
   ![Image of Dataset](https://i.postimg.cc/tTZ0GWHr/data-x-y.jpg)
+- Mengimputasi nilai yang hilang dengan menggunakan median <br />
+  ![Image isi kolom](https://i.postimg.cc/FRKC8Rh1/median.jpg)
 
 ## Modeling
 
@@ -132,44 +131,91 @@ Perbandingan Hasil dari kedua model sebagai berikut:<br />
 - _Confussion Matrix_ algoritma Neural Network:<br />
   ![Image of Dataset](https://i.postimg.cc/V6HSPZB8/output-nn.png)
 
-### Model Akhir yang Digunakan Neural Network
+### Cara Kerja Algoritma KNN:
+![knn](https://github.com/user-attachments/assets/7c9b3ffe-3f88-4668-ba9b-b1f711295ea1)
 
-- Pembuatan Model <br />
-  Model yang digunakan adalah Multi-Layer Perceptron (MLP), yang merupakan salah satu jenis jaringan saraf tiruan. MLP adalah model yang terdiri dari beberapa lapisan neuron (nodes) yang terhubung penuh (fully connected) antara satu lapisan dengan lapisan lainnya. Setiap neuron dalam lapisan tertentu terhubung dengan semua neuron di lapisan berikutnya.
-- Konsep Algoritma Model <br />
-  MLP bekerja dengan cara mengalirkan input (data) melalui lapisan-lapisan jaringan, melakukan transformasi non-linear di setiap lapisan, dan akhirnya menghasilkan output. Proses ini melibatkan perkalian matriks input dengan bobot-bobot (weights) pada setiap koneksi, penambahan bias, dan penerapan fungsi aktivasi untuk menentukan output dari neuron tersebut.
-- Hyperparameter yang Digunakan <br />
-  Dalam model yang dibuat, terdapat beberapa hyperparameter yang diatur, yaitu:
-  - hidden_layer_sizes=(128,64,32): Ini berarti model memiliki tiga lapisan tersembunyi dengan jumlah neuron masing-masing sebanyak 128, 64, dan 32. Setiap lapisan ini bertugas untuk mengekstraksi fitur dari data secara berurutan, di mana lapisan yang lebih dalam diharapkan mampu menangkap pola yang lebih kompleks.
-  - solver='adam': Solver yang digunakan untuk optimisasi adalah 'adam', yang merupakan salah satu metode optimasi berbasis gradien dengan adaptasi pembelajaran untuk setiap parameter. Adam sangat populer karena efisien dalam hal waktu dan performa yang baik pada berbagai jenis data.
-  - max_iter=500: Ini adalah jumlah maksimum iterasi yang akan dijalankan selama proses pelatihan. Jika model belum mencapai konvergensi dalam 500 iterasi, maka proses pelatihan akan berhenti.
-- Proses Pelatihan <br />
-  Proses pelatihan dilakukan dengan menggunakan data pelatihan (X_train) dan label (y_train). Label y_train diubah menjadi vektor 1D menggunakan np.ravel() agar sesuai dengan format yang diharapkan oleh model.<br/> Model dilatih untuk meminimalkan kesalahan prediksi dengan memperbarui bobot-bobotnya pada setiap iterasi berdasarkan error yang dihitung melalui backpropagation. Proses ini berlangsung hingga model mencapai jumlah iterasi maksimal atau sampai model mencapai konvergensi, yaitu ketika perubahan dalam fungsi loss (kerugian) sudah sangat kecil.<br/>
+
+KNN adalah algoritma klasifikasi yang bekerja berdasarkan prinsip "majority vote" atau suara terbanyak dari tetangga terdekat. Ketika ada data baru yang perlu diklasifikasikan, algoritma ini akan:
+
+Mengukur Jarak: Menghitung jarak antara data baru tersebut dengan semua data yang sudah ada di dataset pelatihan. Jarak ini bisa diukur dengan berbagai metode, seperti Euclidean distance, Manhattan distance, atau lainnya.
+Menemukan Tetangga Terdekat: Mengidentifikasi sejumlah 'K' data dari dataset pelatihan yang memiliki jarak terdekat dengan data baru tersebut. 'K' ini adalah parameter yang perlu ditentukan sebelumnya.
+Melakukan Voting: Melihat label kelas dari 'K' tetangga terdekat tersebut. Label kelas yang paling banyak muncul di antara tetangga-tetangga ini akan menjadi label kelas yang diberikan kepada data baru tersebut.
+Parameter yang Digunakan:
+
+Pada laporan klasifikasi yang ditampilkan, terlihat bahwa model KNN menggunakan parameter n_neighbors=5. Artinya, algoritma ini akan mempertimbangkan 5 tetangga terdekat untuk melakukan voting dan menentukan kelas dari data baru.
+
+* Kelebihan KNN:
+  * Sederhana dan mudah dipahami.
+  * Tidak memerlukan asumsi tentang distribusi data (non-parametric).
+  * Dapat digunakan untuk klasifikasi maupun regresi.
+
+* Kekurangan KNN:
+  * Bisa menjadi lambat jika dataset pelatihan sangat besar karena harus menghitung jarak dengan semua data.
+  * Sensitif terhadap fitur yang tidak relevan atau memiliki skala yang berbeda-beda.
+  * Memerlukan pemilihan nilai 'K' yang tepat, yang bisa mempengaruhi performa model.
+
+### Cara Kerja Algoritma MLP:
+![mlp](https://github.com/user-attachments/assets/a75d52b8-3d91-45cf-9665-afcfba2b24ed)
+
+* MLP terdiri dari beberapa lapisan neuron yang saling terhubung:
+
+  * Lapisan Input: Menerima data masukan (fitur-fitur yang digunakan untuk klasifikasi).
+  * Lapisan Tersembunyi: Terdiri dari satu atau lebih lapisan neuron yang melakukan transformasi non-linear pada data masukan. Setiap neuron di lapisan ini menerima input dari lapisan sebelumnya, melakukan pemrosesan dengan fungsi aktivasi, dan meneruskan output ke lapisan berikutnya.
+  * Lapisan Output: Menghasilkan prediksi kelas. Jumlah neuron di lapisan ini biasanya sama dengan jumlah kelas yang mungkin.
+Proses pembelajaran MLP melibatkan penyesuaian bobot koneksi antar neuron untuk meminimalkan kesalahan prediksi pada data pelatihan. Ini dilakukan dengan algoritma optimasi seperti backpropagation dan gradient descent.
+
+* Parameter yang Digunakan:
+  * `hidden_layer_sizes=(128, 64, 32)`: Menentukan arsitektur jaringan dengan 3 lapisan tersembunyi yang memiliki masing masing 128, 64, dan 32 neuron.
+  * `solver='adam'`: Menggunakan algoritma optimasi Adam untuk melatih model.
+  * `max_iter=500`: Menetapkan jumlah maksimum iterasi (epoch) selama pelatihan.
+
+* Interpretasi Laporan Klasifikasi:
+  * Akurasi keseluruhan 0.9535: Model MLP ini juga menunjukkan performa yang sangat baik, mampu memprediksi kelas dengan benar untuk sekitar 95.35% data uji.
+  * Precision, recall, dan F1-score tinggi untuk sebagian besar kelas: Menunjukkan kemampuan model yang baik dalam mengidentifikasi kelas-kelas tersebut.
+  * Perbedaan performa antar kelas: Beberapa kelas mungkin sedikit lebih sulit diprediksi daripada yang lain, tetapi secara umum model ini sangat efektif.
+
+* Perbandingan dengan KNN:
+  * MLP cenderung lebih kompleks daripada KNN: MLP memiliki lebih banyak parameter yang perlu diatur dan proses pelatihan yang lebih rumit.
+  * MLP dapat mempelajari hubungan non-linear yang kompleks dalam data: Ini bisa menjadi keuntungan jika data memiliki pola yang tidak dapat dideteksi oleh KNN yang lebih sederhana.
+  * KNN lebih mudah diinterpretasikan: Keputusan KNN didasarkan pada kemiripan dengan tetangga terdekat, sedangkan keputusan MLP lebih sulit dipahami karena melibatkan banyak lapisan dan bobot.
 
 ## Evaluation
 
 ---
 
-Setelah pelatihan selesai, model digunakan untuk memprediksi data uji (X_test). Hasil prediksi disimpan dalam variabel y_pred. Kemudian, performa model dievaluasi dengan menggunakan laporan klasifikasi (classification_report) yang menampilkan metrik-metrik penting seperti precision, recall, f1-score, dan akurasi.<br /> Dari hasil yang ditampilkan pada gambar, dapat dilihat bahwa model memiliki performa yang baik dengan precision, recall, dan f1-score yang konsisten tinggi pada setiap kelas yang diuji. Ini menunjukkan bahwa model MLP ini mampu mengklasifikasikan data uji dengan akurasi yang cukup tinggi. <br />
+* Evaluasi Metrik <br />
+Dari laporan klasifikasi yang diberikan, kita dapat melihat bahwa model Multi-Layer Perceptron (MLP) memiliki performa yang sedikit lebih baik daripada model K-Nearest Neighbors (KNN) dalam hal akurasi keseluruhan:
 
-![Image of Dataset](https://i.postimg.cc/76FshrFN/evaluasi.png)
+  * Akurasi MLP: 0.9535
+  * Akurasi KNN: 0.9340
 
-1. Penerapan Algoritma Neural Network untuk Rekomendasi Penilaian yang Lebih Akurat dan Konsisten <br />
-Algoritma Neural Network dapat diterapkan dalam proses sertifikasi untuk mengolah data yang kompleks dan non-linear dari berbagai sumber, seperti riwayat belajar peserta, hasil ujian sebelumnya, umpan balik dari pelatihan, dan performa peserta selama kursus. Neural Network memiliki kemampuan untuk belajar dari data historis ini dan mengidentifikasi pola-pola penting yang mungkin tidak terlihat oleh manusia.
-    * Pemrosesan Data Multi-Dimensional: Neural Network mampu menangani banyak fitur input, seperti waktu yang dihabiskan peserta dalam belajar, tingkat kesulitan materi yang dipelajari, dan hasil tes sebelumnya. Ini memungkinkan model untuk memberikan rekomendasi              penilaian yang mempertimbangkan semua aspek yang relevan, sehingga hasil penilaian menjadi lebih akurat dan konsisten.
-    * Prediksi Berbasis Pola Historis: Dengan memanfaatkan data dari peserta sebelumnya yang memiliki karakteristik atau riwayat belajar yang serupa, model dapat memberikan prediksi atau rekomendasi penilaian yang sesuai dengan performa nyata yang diharapkan, sehingga          mengurangi bias atau inkonsistensi yang mungkin muncul dalam penilaian manual.
-2. Mengurangi Subjektivitas dalam Penilaian Asesor dengan Memanfaatkan Riwayat Belajar Peserta <br />
-Subjektivitas dalam penilaian sering kali muncul karena penilaian didasarkan pada persepsi individual dari asesor, yang bisa dipengaruhi oleh faktor-faktor non-akademis. Dengan menggunakan algoritma Neural Network, riwayat belajar peserta dapat diolah untuk memberikan penilaian yang lebih objektif.
-    * Standardisasi Penilaian: Neural Network dapat digunakan untuk menciptakan model penilaian yang seragam berdasarkan data historis, sehingga penilaian yang dihasilkan menjadi lebih konsisten antara satu asesor dengan yang lain. Model ini secara otomatis dapat               mempertimbangkan faktor-faktor yang relevan dari riwayat belajar peserta tanpa dipengaruhi oleh preferensi atau bias asesor.
-    * Penilaian Berdasarkan Data: Algoritma Neural Network dapat diberi akses ke data riwayat belajar, seperti kinerja dalam tugas-tugas tertentu, kecepatan dalam menyelesaikan materi, dan keterampilan yang telah dikuasai. Model kemudian dapat memberikan penilaian yang         didasarkan pada data yang valid, mengurangi kemungkinan penilaian yang dipengaruhi oleh opini atau persepsi asesor.
-3. Integrasi Sistem Rekomendasi Berbasis Neural Network dalam Proses Sertifikasi Profesi <br />
-Integrasi sistem rekomendasi berbasis Neural Network ke dalam proses sertifikasi profesi dapat meningkatkan efisiensi dan efektivitas penilaian melalui beberapa cara:
-    * Automatisasi Penilaian Awal: Sistem Neural Network dapat diintegrasikan sebagai alat bantu untuk melakukan penilaian awal terhadap peserta berdasarkan data yang ada, sebelum asesor memberikan penilaian akhir. Ini bisa mengurangi beban kerja asesor dan mempercepat         proses sertifikasi.
-    * Pemberian Umpan Balik yang Lebih Tepat: Sistem ini juga dapat digunakan untuk memberikan umpan balik secara otomatis kepada peserta berdasarkan hasil penilaian yang dihasilkan oleh Neural Network. Umpan balik ini dapat membantu peserta memahami kekuatan dan               kelemahan mereka serta memberikan rekomendasi untuk perbaikan, yang pada akhirnya meningkatkan kualitas peserta yang disertifikasi.
-    * Pengambilan Keputusan yang Lebih Cepat dan Tepat: Dengan integrasi Neural Network, pengambilan keputusan dalam sertifikasi dapat dilakukan lebih cepat karena rekomendasi yang dihasilkan sistem dapat langsung digunakan oleh asesor sebagai referensi. Hal ini akan           meningkatkan efektivitas proses penilaian tanpa mengurangi kualitas hasil akhir.
+  Selain itu, MLP juga menunjukkan nilai precision, recall, dan F1-score yang lebih tinggi atau setara untuk hampir semua kelas dibandingkan dengan KNN. Ini menunjukkan bahwa MLP lebih baik dalam mengidentifikasi kelas-kelas tersebut dengan benar dan mengurangi kesalahan klasifikasi.
+
+* Evaluasi terhadap Business Understanding<br />
+Apakah sudah menjawab problem statement?<br />
+Ya, kedua model (KNN dan MLP) menunjukkan potensi dalam menjawab problem statement yang telah didefinisikan:
+
+  * Prediksi penilaian yang lebih akurat dan konsisten: Kedua model menunjukkan akurasi yang tinggi, menunjukkan kemampuan mereka dalam menghasilkan prediksi penilaian yang lebih baik daripada metode tradisional yang mungkin rentan terhadap subjektivitas.
+  * Mengurangi subjektivitas dalam penilaian: Meskipun model-model ini tidak secara langsung menghilangkan subjektivitas asesor, mereka memberikan informasi tambahan yang objektif berdasarkan riwayat belajar peserta. Ini dapat membantu asesor membuat keputusan yang lebih informatif dan mengurangi bias.
+  * Meningkatkan efisiensi dan efektivitas penilaian: Dengan otomatisasi sebagian proses penilaian, sistem prediksi dapat mempercepat proses sertifikasi dan memungkinkan asesor untuk fokus pada tugas-tugas lain yang lebih kompleks.
+
+* Apakah berhasil mencapai goals yang diharapkan?<br />
+Secara umum, ya. Kedua model menunjukkan hasil yang menjanjikan dalam mencapai tujuan proyek. Namun, perlu diingat bahwa evaluasi lebih lanjut diperlukan dalam lingkungan nyata untuk memastikan bahwa model-model ini benar-benar efektif dalam meningkatkan proses sertifikasi.
+
+* Apakah solusi statement yang kamu rencanakan berdampak?<br />
+Ya, solusi statement yang direncanakan, terutama pra-pemrosesan data dan pemilihan model yang tepat, jelas berdampak pada performa model.
+
+  * Pra-pemrosesan data: Membersihkan data dan menerapkan standardisasi membantu memastikan bahwa model dapat belajar dari data dengan benar dan menghasilkan prediksi yang akurat.
+  * Pemilihan model: Perbandingan antara KNN dan MLP menunjukkan bahwa pemilihan model yang sesuai dengan karakteristik data dapat meningkatkan performa secara signifikan. Dalam kasus ini, MLP tampaknya lebih cocok karena mampu menangkap hubungan non-linear yang kompleks dalam data.
 
 ## Kesimpulan
-Menggunakan algoritma Neural Network dalam proses sertifikasi dapat secara signifikan meningkatkan akurasi dan konsistensi penilaian. Dengan memanfaatkan riwayat belajar peserta, sistem ini dapat mengurangi subjektivitas penilaian asesor, memberikan rekomendasi penilaian yang lebih objektif, dan mempercepat proses sertifikasi melalui automatisasi dan efisiensi yang lebih baik. Integrasi sistem ini ke dalam proses sertifikasi tidak hanya akan memperbaiki kualitas penilaian tetapi juga memberikan nilai tambah dalam hal peningkatan kompetensi peserta dan kredibilitas proses sertifikasi itu sendiri.
+Berdasarkan evaluasi metrik dan business understanding, model MLP direkomendasikan sebagai model terbaik untuk prediksi penilaian dalam proses sertifikasi. Namun, penting untuk terus melakukan pengembangan dan evaluasi lebih lanjut, termasuk:
+
+  * Mengumpulkan lebih banyak data: Semakin banyak data yang tersedia, semakin baik model dapat belajar dan menghasilkan prediksi yang lebih akurat.
+  * Mencoba arsitektur dan hyperparameter lain: Mungkin ada konfigurasi MLP lain yang dapat menghasilkan performa yang lebih baik.
+  * Mengevaluasi model dalam lingkungan nyata: Menguji model dengan data baru dan mendapatkan umpan balik dari asesor akan membantu mengidentifikasi area perbaikan lebih lanjut. <br />
+
+Dengan pengembangan dan evaluasi yang berkelanjutan, sistem prediksi berbasis Neural Network ini memiliki potensi besar untuk meningkatkan kualitas, efisiensi, dan objektivitas proses sertifikasi profesi.
 
 ## Referensi
 
