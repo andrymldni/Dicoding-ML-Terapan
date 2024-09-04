@@ -2,7 +2,7 @@
 
 ## Domain Proyek
 
-Domain proyek yang dipilih dalam proyek machine learning ini adalah mengenai kesehatan dengan judul proyek "Sistem Rekomendasi Penilaian Asesor Dalam
+Domain proyek yang dipilih dalam proyek machine learning ini adalah mengenai pendidikan dengan judul proyek "Sistem Rekomendasi Penilaian Asesor Dalam
 Sertifikasi Profesi Berdasarkan Riwayat Belajar Peserta".
 
 - ##### Latar Belakang
