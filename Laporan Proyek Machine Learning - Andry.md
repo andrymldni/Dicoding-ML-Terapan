@@ -8,7 +8,6 @@ Domain proyek yang dipilih dalam proyek machine learning ini adalah mengenai pen
   Dalam era globalisasi dan persaingan dunia kerja yang semakin ketat, sertifikasi profesi telah menjadi salah satu tolok ukur penting dalam menilai kompetensi individu di berbagai bidang [1](https://proceeding.unnes.ac.id/snpasca/article/view/281). Sertifikasi ini tidak hanya membantu individu dalam meningkatkan kredibilitas dan daya saing mereka, tetapi juga memberikan jaminan kepada pemberi kerja mengenai kemampuan dan pengetahuan yang dimiliki oleh calon pekerja [2](https://jimfeb.ub.ac.id/index.php/jimfeb/article/view/6853). Dengan demikian, sertifikasi profesional berfungsi sebagai bukti formal atas keterampilan dan pengetahuan, yang dapat meningkatkan peluang kerja serta pengembangan karir seseorang di masa depan. Namun, proses sertifikasi bukanlah hal yang sederhana. Penilaian kompetensi peserta oleh asesor merupakan tahap krusial dalam memastikan bahwa individu yang disertifikasi benar-benar memiliki kemampuan yang diperlukan. Penilaian ini sering kali melibatkan evaluasi berbagai aspek kompetensi, seperti pengetahuan teoritis, keterampilan praktis, dan pengalaman kerja . Dalam konteks ini, tantangan yang dihadapi asesor semakin kompleks, terutama ketika jumlah peserta meningkat dan kriteria penilaian menjadi lebih rumit [3](https://stiemmamuju.e-journal.id/FJIIM/article/download/115/70). Kondisi ini dapat meningkatkan risiko ketidak konsistenan dan subjektivitas dalam penilaian, yang dapat mempengaruhi keadilan dan akurasi hasil sertifikasi.
 
 ## Business Understanding
-
 ---
 
 ### Problem Statements
@@ -103,22 +102,24 @@ Pada berkas yang diuduh yakni dataset-tortuga.csv berisi 20000 baris dan 16 kolo
   ![missing value](https://github.com/user-attachments/assets/be585bd4-04b9-4309-96c5-84ef07565294)
 
 ## Data Preparation
-
 ---
 
 Berikut adalah tahapan-tahapan dalam melakukan pra-pemrosesan data:
 
-- Membagi dataset menjadi dua bagian: data latih (70%) dan data uji (30%) menggunakan fungsi train_test_split. Pembagian ini penting dalam pengembangan model machine learning untuk melatih model dan mengevaluasi performanya, serta mencegah overfitting. <br />
-  ![Image of Dataset](https://i.postimg.cc/nr14w9gr/splidata.jpg)
-- Melakukan standardisasi fitur pada data latih dan uji, sehingga fitur-fitur memiliki rata-rata 0 dan standar deviasi 1. Ini penting untuk banyak algoritma machine learning agar performa model optimal. <br />
-  ![Image of Dataset](https://i.postimg.cc/d3t8TtNy/standart.jpg)
-- Kode ini membagi data menjadi fitur (X) dan target (y) untuk pelatihan dan pengujian model.<br />
-  ![Image of Dataset](https://i.postimg.cc/tTZ0GWHr/data-x-y.jpg)
-- Mengimputasi nilai yang hilang dengan menggunakan median <br />
+- Menangani Nilai yang Hilang: Nilai yang hilang pada dataset diatasi dengan menggunakan median dari setiap kolom. Hal ini dilakukan untuk memastikan bahwa tidak ada data yang hilang yang dapat mengganggu proses pelatihan model. <br />
   ![Image isi kolom](https://i.postimg.cc/FRKC8Rh1/median.jpg)
+- Membagi Dataset: Dataset dibagi menjadi dua bagian:
+
+    * Data latih (70%): Digunakan untuk melatih model machine learning.
+    * Data uji (30%): Digunakan untuk mengevaluasi performa model yang telah dilatih. Pembagian ini penting untuk mencegah overfitting dan mendapatkan estimasi performa model yang lebih baik pada data yang belum pernah dilihat sebelumnya.
+  
+  ![Image of Dataset](https://i.postimg.cc/nr14w9gr/splidata.jpg)
+- Standardisasi Fitur: Fitur-fitur pada data latih dan data uji distandardisasi sehingga memiliki rata-rata 0 dan standar deviasi 1. Proses ini penting untuk banyak algoritma machine learning, termasuk K-Nearest Neighbors dan Neural Network, karena dapat membantu model belajar lebih efisien dan menghasilkan performa yang lebih baik.. <br />
+  ![Image of Dataset](https://i.postimg.cc/d3t8TtNy/standart.jpg)
+- Pemisahan Fitur dan Target: Data dipisahkan menjadi fitur (X) dan target (y) baik untuk data latih maupun data uji. Fitur-fitur ini akan digunakan sebagai input untuk model, sedangkan target akan digunakan sebagai nilai yang akan diprediksi oleh model. <br />
+  ![Image of Dataset](https://i.postimg.cc/tTZ0GWHr/data-x-y.jpg)
 
 ## Modeling
-
 ---
 
 Setelah dilakukan pra-pemrosesan pada dataset, langkah selanjutnya adalah modeling terhadap data. Pada tahap ini menggunakan 2 algoritma yaitu K-Nearest Neighbor (KNN) dan Neural Network (NN) dengan tanpa parameter tambahan. Pertama-tama kedua model ini dilatih menggunakan data latih. Setelah itu kedua model akan diuji dengan data uji. Terakhir kedua model akan diukur nilai akurasinya. Perbandingan hasil dari kedua model akan dianalisis untuk menentukan algoritma terbaik.
@@ -180,33 +181,31 @@ Proses pembelajaran MLP melibatkan penyesuaian bobot koneksi antar neuron untuk 
   * KNN lebih mudah diinterpretasikan: Keputusan KNN didasarkan pada kemiripan dengan tetangga terdekat, sedangkan keputusan MLP lebih sulit dipahami karena melibatkan banyak lapisan dan bobot.
 
 ## Evaluation
-
 ---
 
+* Metrik Evaluasi <br />
+Dalam laporan ini, beberapa metrik evaluasi digunakan untuk mengukur performa model K-Nearest Neighbors (KNN) dan Multi-Layer Perceptron (MLP):
+
+  * Akurasi: Mengukur proporsi prediksi yang benar dari keseluruhan prediksi.
+  * Presisi: Mengukur proporsi prediksi positif yang benar dari keseluruhan prediksi positif.
+  * Recall: Mengukur proporsi prediksi positif yang benar dari keseluruhan sampel yang sebenarnya positif.
+  * F1-score: Merupakan rata-rata harmonik antara presisi dan recall, memberikan keseimbangan antara keduanya.
+
 * Evaluasi Metrik <br />
-Dari laporan klasifikasi yang diberikan, kita dapat melihat bahwa model Multi-Layer Perceptron (MLP) memiliki performa yang sedikit lebih baik daripada model K-Nearest Neighbors (KNN) dalam hal akurasi keseluruhan:
+Berdasarkan laporan klasifikasi, model Multi-Layer Perceptron (MLP) menunjukkan performa yang sedikit lebih baik daripada model K-Nearest Neighbors (KNN) dalam hal akurasi keseluruhan:
 
   * Akurasi MLP: 0.9535
   * Akurasi KNN: 0.9340
 
-  Selain itu, MLP juga menunjukkan nilai precision, recall, dan F1-score yang lebih tinggi atau setara untuk hampir semua kelas dibandingkan dengan KNN. Ini menunjukkan bahwa MLP lebih baik dalam mengidentifikasi kelas-kelas tersebut dengan benar dan mengurangi kesalahan klasifikasi.
+  Selain itu, MLP juga menunjukkan nilai presisi, recall, dan F1-score yang lebih tinggi atau setara untuk hampir semua kelas dibandingkan dengan KNN. Ini menunjukkan bahwa MLP lebih baik dalam mengidentifikasi kelas-kelas tersebut dengan benar dan mengurangi kesalahan klasifikasi.
 
 * Evaluasi terhadap Business Understanding<br />
-Apakah sudah menjawab problem statement?<br />
-Ya, kedua model (KNN dan MLP) menunjukkan potensi dalam menjawab problem statement yang telah didefinisikan:
-
-  * Prediksi penilaian yang lebih akurat dan konsisten: Kedua model menunjukkan akurasi yang tinggi, menunjukkan kemampuan mereka dalam menghasilkan prediksi penilaian yang lebih baik daripada metode tradisional yang mungkin rentan terhadap subjektivitas.
-  * Mengurangi subjektivitas dalam penilaian: Meskipun model-model ini tidak secara langsung menghilangkan subjektivitas asesor, mereka memberikan informasi tambahan yang objektif berdasarkan riwayat belajar peserta. Ini dapat membantu asesor membuat keputusan yang lebih informatif dan mengurangi bias.
-  * Meningkatkan efisiensi dan efektivitas penilaian: Dengan otomatisasi sebagian proses penilaian, sistem prediksi dapat mempercepat proses sertifikasi dan memungkinkan asesor untuk fokus pada tugas-tugas lain yang lebih kompleks.
-
-* Apakah berhasil mencapai goals yang diharapkan?<br />
-Secara umum, ya. Kedua model menunjukkan hasil yang menjanjikan dalam mencapai tujuan proyek. Namun, perlu diingat bahwa evaluasi lebih lanjut diperlukan dalam lingkungan nyata untuk memastikan bahwa model-model ini benar-benar efektif dalam meningkatkan proses sertifikasi.
-
-* Apakah solusi statement yang kamu rencanakan berdampak?<br />
-Ya, solusi statement yang direncanakan, terutama pra-pemrosesan data dan pemilihan model yang tepat, jelas berdampak pada performa model.
-
-  * Pra-pemrosesan data: Membersihkan data dan menerapkan standardisasi membantu memastikan bahwa model dapat belajar dari data dengan benar dan menghasilkan prediksi yang akurat.
-  * Pemilihan model: Perbandingan antara KNN dan MLP menunjukkan bahwa pemilihan model yang sesuai dengan karakteristik data dapat meningkatkan performa secara signifikan. Dalam kasus ini, MLP tampaknya lebih cocok karena mampu menangkap hubungan non-linear yang kompleks dalam data.
+  * Prediksi penilaian yang lebih akurat dan konsisten:
+Kedua model (KNN dan MLP), dengan akurasi di atas 90%, menunjukkan kemampuan yang baik dalam menghasilkan prediksi penilaian yang akurat. Hal ini menunjukkan potensi mereka untuk menghasilkan prediksi yang lebih baik dan lebih konsisten dibandingkan metode penilaian tradisional yang mungkin rentan terhadap subjektivitas dan ketidakkonsistenan antar asesor.
+  * Mengurangi subjektivitas dalam penilaian:
+Meskipun model-model ini tidak secara langsung menghilangkan subjektivitas asesor, mereka memberikan informasi tambahan yang objektif berdasarkan riwayat belajar peserta. Informasi ini dapat membantu asesor membuat keputusan yang lebih informatif dan mengurangi bias yang mungkin terjadi dalam penilaian manual. Dengan demikian, model-model ini dapat berkontribusi pada pengurangan subjektivitas dalam penilaian.
+  * Meningkatkan efisiensi dan efektivitas penilaian:
+Dengan otomatisasi sebagian proses penilaian, sistem prediksi dapat membantu mempercepat proses sertifikasi. Hal ini memungkinkan asesor untuk fokus pada tugas-tugas lain yang lebih kompleks, seperti memberikan umpan balik yang lebih mendalam kepada peserta atau mengembangkan materi pelatihan. Dengan demikian, model-model ini berpotensi meningkatkan efisiensi dan efektivitas penilaian secara keseluruhan.
 
 ## Kesimpulan
 Berdasarkan evaluasi metrik dan business understanding, model MLP direkomendasikan sebagai model terbaik untuk prediksi penilaian dalam proses sertifikasi. Namun, penting untuk terus melakukan pengembangan dan evaluasi lebih lanjut, termasuk:
@@ -218,7 +217,6 @@ Berdasarkan evaluasi metrik dan business understanding, model MLP direkomendasik
 Dengan pengembangan dan evaluasi yang berkelanjutan, sistem prediksi berbasis Neural Network ini memiliki potensi besar untuk meningkatkan kualitas, efisiensi, dan objektivitas proses sertifikasi profesi.
 
 ## Referensi
-
 ---
 
 [[1]](https://proceeding.unnes.ac.id/snpasca/article/view/281) Nur Rohmah. (2019). _Sertifikasi Kompetensi sebagai Upaya Meningkatkan Keunggulan Kompetitif Lulusan Program Studi Tata Laksana Angkutan Laut dan Kepelabuhan Politeknik Ilmu Pelayaran Semarang di Era Disrupsi (Seminar Nasional Pascasarjana, Universitas Negeri Semarang)_. https://proceeding.unnes.ac.id/snpasca/article/view/281 <br />
