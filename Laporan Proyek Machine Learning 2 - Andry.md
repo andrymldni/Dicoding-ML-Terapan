@@ -209,12 +209,12 @@ Berikut adalah tahapan-tahapan dalam melakukan pra-pemrosesan data:
 - **Membangun Model dengan Collaborative Filtering**
   - RecommenderNet dari Keras:
     - Cara Kerja: RecommenderNet adalah model deep learning yang digunakan untuk sistem rekomendasi. Ini biasanya menggunakan arsitektur embedding, di mana setiap pengguna dan item diwakili sebagai vektor embedding dalam ruang laten. Model ini belajar representasi laten dari pengguna dan item untuk memprediksi interaksi masa depan di antara mereka, seperti rating buku atau rekomendasi buku yang belum dibaca oleh pengguna.
-    - Parameter yang Digunakan:
+  - Parameter yang Digunakan:
     - Optimizer: Optimizer seperti Adam atau RMSprop digunakan untuk mengupdate bobot model.
     - Loss Function: Mean Squared Error (MSE) atau Binary Crossentropy tergantung pada apakah model memprediksi nilai kontinu (rating) atau probabilitas.
     - Epoch: Jumlah epoch menentukan seberapa banyak model akan dilatih pada data.
     - Embedding Dimensions: Jumlah dimensi embedding menentukan ukuran representasi laten untuk pengguna dan item. Dimensi ini dipilih dengan trade-off antara akurasi dan kompleksitas model.
-    - Hasil: RecommenderNet mampu memberikan hasil yang lebih kompleks dibandingkan metode berbasis kesamaan sederhana seperti cosine similarity. Karena model deep learning ini dapat menangkap interaksi non-linear antara pengguna dan item, hasil rekomendasi cenderung lebih akurat dan relevan. Model ini bisa memberikan rekomendasi buku yang belum pernah dibaca oleh pengguna, tetapi kemungkinan besar akan mereka sukai.
+  - Hasil: RecommenderNet mampu memberikan hasil yang lebih kompleks dibandingkan metode berbasis kesamaan sederhana seperti cosine similarity. Karena model deep learning ini dapat menangkap interaksi non-linear antara pengguna dan item, hasil rekomendasi cenderung lebih akurat dan relevan. Model ini bisa memberikan rekomendasi buku yang belum pernah dibaca oleh pengguna, tetapi kemungkinan besar akan mereka sukai.
   - Proses training
     
     ![image](https://github.com/user-attachments/assets/ca667031-db5d-4fcd-b180-7a34abd025b8)
