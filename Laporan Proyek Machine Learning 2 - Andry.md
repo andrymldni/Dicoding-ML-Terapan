@@ -71,7 +71,7 @@ Solusi yang dapat dilakukan untuk memenuhi tujuan dari proyek ini diantaranya :
 Informasi dataset dapat dilihat pada tabel dibawah ini:
 Jenis | Keterangan
 --- | ---
-Sumber | [Kaggle Dataset : Book Recommendation Dataset]([https://www.kaggle.com/datasets/scarecrow2020/tech-students-profile-prediction/data](https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset))
+Sumber | [Kaggle Dataset : Book Recommendation Dataset](https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset)
 Lisensi | [CC0: Public Domain](https://creativecommons.org/publicdomain/zero/1.0/)
 Kategori | Literature, Recommender Systems, Culture and Humanities
 Jenis dan Ukuran Berkas | CSV (107.51 MB)
