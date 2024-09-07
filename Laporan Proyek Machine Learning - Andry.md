@@ -1,12 +1,16 @@
 # Laporan Proyek Machine Learning - Andry Syva Maldini
 
 ## Domain Proyek
+> **Domain proyek yang dipilih dalam proyek machine learning ini adalah mengenai pendidikan dengan judul proyek "Prediksi Kelulusan Sertifikasi Profesi Berdasarkan Riwayat Belajar Peserta"**.
 
-Domain proyek yang dipilih dalam proyek machine learning ini adalah mengenai pendidikan dengan judul proyek "Prediksi Kelulusan Sertifikasi Profesi Berdasarkan Riwayat Belajar Peserta".
+- Latar Belakang
+  <p align="center">
+  <img src="https://github.com/user-attachments/assets/5c9b35cd-945b-4696-98f6-a22a743c4ce6" alt="dataset-cover" width="500">
+  </p>
 
-- ##### Latar Belakang
   Dalam era globalisasi dan persaingan dunia kerja yang semakin ketat, sertifikasi profesi telah menjadi salah satu tolok ukur penting dalam menilai kompetensi individu di berbagai bidang [1](https://proceeding.unnes.ac.id/snpasca/article/view/281). Sertifikasi ini tidak hanya membantu individu dalam meningkatkan kredibilitas dan daya saing mereka, tetapi juga memberikan jaminan kepada pemberi kerja mengenai kemampuan dan pengetahuan yang dimiliki oleh calon pekerja [2](https://jimfeb.ub.ac.id/index.php/jimfeb/article/view/6853). Dengan demikian, sertifikasi profesional berfungsi sebagai bukti formal atas keterampilan dan pengetahuan, yang dapat meningkatkan peluang kerja serta pengembangan karir seseorang di masa depan. Namun, proses sertifikasi bukanlah hal yang sederhana. Penilaian kompetensi peserta oleh asesor merupakan tahap krusial dalam memastikan bahwa individu yang disertifikasi benar-benar memiliki kemampuan yang diperlukan. Penilaian ini sering kali melibatkan evaluasi berbagai aspek kompetensi, seperti pengetahuan teoritis, keterampilan praktis, dan pengalaman kerja . Dalam konteks ini, tantangan yang dihadapi asesor semakin kompleks, terutama ketika jumlah peserta meningkat dan kriteria penilaian menjadi lebih rumit [3](https://stiemmamuju.e-journal.id/FJIIM/article/download/115/70). Kondisi ini dapat meningkatkan risiko ketidak konsistenan dan subjektivitas dalam penilaian, yang dapat mempengaruhi keadilan dan akurasi hasil sertifikasi.
 
+___
 ## Business Understanding
 ---
 
@@ -102,7 +106,6 @@ Pada berkas yang diuduh yakni dataset-tortuga.csv berisi 20000 baris dan 16 kolo
   ![missing value](https://github.com/user-attachments/assets/be585bd4-04b9-4309-96c5-84ef07565294)
 
 ## Data Preparation
----
 
 Berikut adalah tahapan-tahapan dalam melakukan pra-pemrosesan data:
 
@@ -120,7 +123,6 @@ Berikut adalah tahapan-tahapan dalam melakukan pra-pemrosesan data:
   ![Image of Dataset](https://i.postimg.cc/tTZ0GWHr/data-x-y.jpg)
 
 ## Modeling
----
 
 Setelah dilakukan pra-pemrosesan pada dataset, langkah selanjutnya adalah modeling terhadap data. Pada tahap ini menggunakan 2 algoritma yaitu K-Nearest Neighbor (KNN) dan Neural Network (NN) dengan tanpa parameter tambahan. Pertama-tama kedua model ini dilatih menggunakan data latih. Setelah itu kedua model akan diuji dengan data uji. Terakhir kedua model akan diukur nilai akurasinya. Perbandingan hasil dari kedua model akan dianalisis untuk menentukan algoritma terbaik.
 
@@ -181,7 +183,6 @@ Proses pembelajaran MLP melibatkan penyesuaian bobot koneksi antar neuron untuk 
   * KNN lebih mudah diinterpretasikan: Keputusan KNN didasarkan pada kemiripan dengan tetangga terdekat, sedangkan keputusan MLP lebih sulit dipahami karena melibatkan banyak lapisan dan bobot.
 
 ## Evaluation
----
 
 * Metrik Evaluasi <br />
 Dalam laporan ini, beberapa metrik evaluasi digunakan untuk mengukur performa model K-Nearest Neighbors (KNN) dan Multi-Layer Perceptron (MLP):
@@ -216,6 +217,7 @@ Berdasarkan evaluasi metrik dan business understanding, model MLP direkomendasik
 
 Dengan pengembangan dan evaluasi yang berkelanjutan, sistem prediksi berbasis Neural Network ini memiliki potensi besar untuk meningkatkan kualitas, efisiensi, dan objektivitas proses sertifikasi profesi.
 
+___
 ## Referensi
 ---
 
