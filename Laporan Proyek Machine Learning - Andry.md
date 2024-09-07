@@ -1,7 +1,7 @@
 # Laporan Proyek Machine Learning - Andry Syva Maldini
 
-## Domain Proyek
-> **Domain proyek yang dipilih dalam proyek machine learning ini adalah mengenai pendidikan dengan judul proyek "Prediksi Kelulusan Sertifikasi Profesi Berdasarkan Riwayat Belajar Peserta"**.
+## Domain Project
+> **Domain project yang dipilih dalam proyek machine learning ini adalah mengenai pendidikan dengan judul proyek "Prediksi Kelulusan Sertifikasi Profesi Berdasarkan Riwayat Belajar Peserta"**.
 
 - Latar Belakang
   <p align="center">
