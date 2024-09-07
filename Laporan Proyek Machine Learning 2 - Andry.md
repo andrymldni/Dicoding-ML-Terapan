@@ -161,7 +161,7 @@ Berikut adalah tahapan-tahapan dalam melakukan pra-pemrosesan data:
 
     Matriks TF-IDF berhasil mengidentifikasi fitur penting dari setiap judul buku menggunakan fungsi tfidfvectorizer. Karena dataset yang besar, hanya ditampilkan sampel acak 10 judul buku dan 15 nama penulis.    
 
-- ### Data Preparation untuk Model Development dengan Collaborative Filtering
+- **Data Preparation untuk Model Development dengan Collaborative Filtering**
 
     Dalam pengembangan model collaborative filtering, data akan dibagi menjadi data pelatihan dan validasi. Sebelum itu, data perlu dipersiapkan agar mudah diproses oleh model. Data rating akan diubah menjadi matriks numerik. Pada tahap ini, beberapa teknik akan diterapkan untuk mempersiapkan data, seperti encoding fitur `User-ID` dan `ISBN` menjadi indeks integer, memetakan `User-ID` dan `ISBN` ke dataframe terkait, dan terakhir memeriksa beberapa aspek data, seperti jumlah pengguna, jumlah buku, dan mengonversi nilai rating ke float untuk digunakan dalam proses pelatihan model.
 
