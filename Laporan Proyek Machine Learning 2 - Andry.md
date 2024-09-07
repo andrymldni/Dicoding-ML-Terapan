@@ -1,7 +1,7 @@
 # Laporan Proyek Machine Learning - Book Recommendation System - Andry Syva Maldini
 ---
 ### Domain Project
-> **Domain proyek yang dipilih dalam proyek machine learning ini adalah mengenai literasi dan minat baca dengan judul proyek "Book Recommendation System"**.
+> **Domain Project yang dipilih dalam proyek machine learning ini adalah mengenai literasi dan minat baca dengan judul proyek "Book Recommendation System"**.
 
 
 
