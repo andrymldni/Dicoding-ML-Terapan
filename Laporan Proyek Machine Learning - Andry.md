@@ -228,3 +228,8 @@ ___
 [[5]](http://publication.petra.ac.id/index.php/teknik-informatika/article/view/10496) Kevin Oktovio Lauw, Leo Willyanto Santoso, Rolly Intan. (2020). _Identifikasi Jenis Anjing Berdasarkan Gambar Menggunakan Convolutional Neural Network Berbasis Android_. http://publication.petra.ac.id/index.php/teknik-informatika/article/view/10496 <br />
 [[6]](https://publikasi.dinus.ac.id/index.php/jais/article/download/1189/893/) Sani, M. S., Zeniarja, J., & Luthfiarta, A. _Penerapan Algoritma K-Nearest Neighbor pada Information Retrieval dalam Penentuan Topik Referensi Tugas Akhir_. UVol 1, No 2 (2016). https://publikasi.dinus.ac.id/index.php/jais/article/download/1189/893/ <br />
 [[7]](https://simdos.unud.ac.id/uploads/file_penelitian_1_dir/721bdb509a6f0bb9ccca6d7374b86759.pdf) Penyelenggara PS. Teknik Informa ka, Jurusan Ilmu Komputer FMIPA - Universitas Udayana Kampus Bukit Jimbaran. _PROSIDING ISSN : X SEMINAR NASIONAL TEKNOLOGI INFORMASI & APLIKASINYA 2015 INOVASI TEKNOLOGI INFORMASI DAN KOMUNIKASI DALAM MENUNJANG TECHNOPRENEURSHIP. Universitas Udayana (2015)_. https://simdos.unud.ac.id/uploads/file_penelitian_1_dir/721bdb509a6f0bb9ccca6d7374b86759.pdfpdf
+
+
+  <p align="center">
+  <img src="https://github.com/user-attachments/assets/819553a6-5461-4dc3-b0ce-9db224ec4a56" alt="five-star">
+  </p>
